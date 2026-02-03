@@ -6,23 +6,23 @@
     <title>井上 岳 | InoueGaku</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" href="/assets/favicon/favicon.ico" />
+    <link rel="icon" href="assets/favicon/favicon.ico" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicon/favicon-32x32.png"
+      href="assets/favicon/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
+      href="assets/favicon/favicon-16x16.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/favicon/apple-touch-icon.png"
+      href="assets/favicon/apple-touch-icon.png"
     />
 
     <link
@@ -32,6 +32,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="#" class="site-header__logo">Inoue Gaku</a>
+        <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+        <nav class="global-nav" id="global-nav">
+          <ul class="global-nav__list">
+            <li><a href="#info" class="global-nav__link">プロフィール</a></li>
+            <li><a href="#highlights" class="global-nav__link">強み</a></li>
+            <li><a href="#journey" class="global-nav__link">歩み</a></li>
+            <li><a href="#career" class="global-nav__link">職歴</a></li>
+            <li><a href="#licenses" class="global-nav__link">資格</a></li>
+            <li><a href="#media" class="global-nav__link">メディア</a></li>
+            <li><a href="#contact" class="global-nav__link">連絡</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <header class="hero">
       <div class="hero__content container">
         <p class="hero__eyebrow">Profile</p>
@@ -231,36 +252,26 @@
       <section id="media" class="section section--accent">
         <div class="container">
           <h2>寿司打</h2>
-
-          <div class="cards-grid cards-grid--media">
-            <article class="media-card">
-              <h3>スコア画像</h3>
-              <p>一番調子が良かった日の画像</p>
-
-              <div class="media-card__media">
-                <img
-                  src="assets/images/sushida.jpg"
-                  alt="寿司打のスコア結果画面"
-                  loading="lazy"
-                />
-              </div>
-            </article>
-            <article class="media-card">
-              <h3>寿司打プレイ動画</h3>
-              <p>とある日の入力中の様子</p>
-
-              <div class="media-card__media">
-                <video
-                  src="assets/videos/sushida.mp4"
-                  controls
-                  preload="metadata"
-                ></video>
-              </div>
-            </article>
+          <!-- Gallery loaded by script.js -->
+        </div>
+      </section>
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>お問い合わせ</h2>
+          <div class="card">
+            <p>
+              お問い合わせは以下のメールアドレスまでお願いいたします。
+            </p>
+            <p>
+              <strong>Email:</strong> <a href="mailto:xxxx@example.com">xxxx@example.com</a>
+            </p>
+            <!-- SNS Links can be added here -->
           </div>
         </div>
       </section>
     </main>
+
+    <script src="script.js"></script>
 
     <footer class="footer">
       <div class="container footer__content">
