@@ -2,7 +2,7 @@
 const productData = {
   sengaku: {
     title: '美空食場 鮮岳',
-    image: 'assets/images/sengaku.jpg',
+    image: 'assets/images/restaurant/sengaku.jpg',
     description: '父が経営している、地元で愛される和食居酒屋です。四季折々の新鮮な食材を使った料理と、落ち着いた空間が自慢です。美味しいお酒と共に、特別なひとときをお過ごしください。',
     website: 'https://sengaku-bikuu.com/'
   },
