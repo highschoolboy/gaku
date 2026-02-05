@@ -1,5 +1,10 @@
 // Product data with detailed descriptions
 const productData = {
+  sengaku: {
+    title: '美空食場 鮮岳',
+    image: 'assets/images/sengaku.png',
+    description: '父が経営している、地元で愛される和食居酒屋です。四季折々の新鮮な食材を使った料理と、落ち着いた空間が自慢です。美味しいお酒と共に、特別なひとときをお過ごしください。公式サイト: https://sengaku-bikuu.com/ | 食べログ: https://tabelog.com/tokyo/A1329/A132902/13262999/'
+  },
   ergodox: {
     title: 'ErgoDox EZ',
     image: 'assets/images/ergodox.png',
@@ -14,6 +19,21 @@ const productData = {
     title: 'Anker 737 Power Bank',
     image: 'assets/images/anker.png',
     description: '超大容量かつ高出力のモバイルバッテリー。MacBook Proも急速充電できるので、カフェでの作業時に重宝しています。残量表示ディスプレイも便利で、あとどれくらい使えるかが一目でわかります。24000mAhの大容量で、スマホなら約5回、ノートPCなら1回以上のフル充電が可能。USB-CとUSB-Aポートを搭載しており、複数デバイスの同時充電にも対応しています。'
+  },
+  'hotel-placeholder': {
+    title: '準備中',
+    image: 'assets/images/switchbot.png',
+    description: 'おすすめのホテル情報を追加予定です。お楽しみに！'
+  },
+  'furniture-placeholder': {
+    title: '準備中',
+    image: 'assets/images/ergodox.png',
+    description: 'おすすめの家具情報を追加予定です。お楽しみに！'
+  },
+  'app-placeholder': {
+    title: '準備中',
+    image: 'assets/images/anker.png',
+    description: 'おすすめのアプリ・ゲーム情報を追加予定です。お楽しみに！'
   }
 };
 

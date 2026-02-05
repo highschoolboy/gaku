@@ -62,35 +62,42 @@
     </header>
 
     <main>
-      <section id="dad-shop" class="section section--accent">
+      <!-- Category: Father's Shop -->
+      <section class="section section--accent">
         <div class="container">
           <h2>父親のお店</h2>
-          <div class="card">
-            <h3>和食居酒屋 美空食場 鮮岳</h3>
-            <p>
-              父が経営している、地元で愛される和食居酒屋です。
-              四季折々の新鮮な食材を使った料理と、落ち着いた空間が自慢です。
-              美味しいお酒と共に、特別なひとときをお過ごしください。
-            </p>
-            <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
-              <a href="https://sengaku-bikuu.com/" target="_blank" rel="noopener noreferrer" class="button">
-                公式サイトを見る
-              </a>
-              <a href="https://tabelog.com/tokyo/A1329/A132902/13262999/" target="_blank" rel="noopener noreferrer" class="button button--ghost">
-                食べログで見る
-              </a>
-            </div>
-            <!-- Placeholder for image if available in future -->
-            <!-- <div class="media-placeholder placeholder-box">お店の写真</div> -->
+          <div class="product-showcase">
+            <article class="product-card" data-product="sengaku">
+              <div class="product-card__image">
+                <img src="assets/images/sengaku.png" alt="美空食場 鮮岳">
+              </div>
+              <h3 class="product-card__title">美空食場 鮮岳</h3>
+              <p class="product-card__tagline">地元で愛される和食居酒屋</p>
+            </article>
           </div>
         </div>
       </section>
 
-
-
-      <section id="items" class="section">
+      <!-- Category: Hotels -->
+      <section class="section">
         <div class="container">
-          <h2>買ってよかったもの</h2>
+          <h2>ホテル</h2>
+          <div class="product-showcase">
+            <article class="product-card" data-product="hotel-placeholder">
+              <div class="product-card__image">
+                <img src="assets/images/switchbot.png" alt="おすすめホテル">
+              </div>
+              <h3 class="product-card__title">準備中</h3>
+              <p class="product-card__tagline">おすすめのホテルを追加予定</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category: PC Peripherals -->
+      <section class="section section--accent">
+        <div class="container">
+          <h2>パソコン周辺機器</h2>
           <div class="product-showcase">
             <article class="product-card" data-product="ergodox">
               <div class="product-card__image">
@@ -100,6 +107,62 @@
               <p class="product-card__tagline">肩の負担が激減した</p>
             </article>
             
+            <article class="product-card" data-product="anker">
+              <div class="product-card__image">
+                <img src="assets/images/anker.png" alt="Anker 737">
+              </div>
+              <h3 class="product-card__title">Anker 737</h3>
+              <p class="product-card__tagline">外出先でも安心</p>
+            </article>
+
+            <article class="product-card" data-product="anker">
+              <div class="product-card__image">
+                <img src="assets/images/anker.png" alt="Anker 737">
+              </div>
+              <h3 class="product-card__title">Anker 737</h3>
+              <p class="product-card__tagline">外出先でも安心</p>
+            </article>
+
+            <article class="product-card" data-product="anker">
+              <div class="product-card__image">
+                <img src="assets/images/anker.png" alt="Anker 737">
+              </div>
+              <h3 class="product-card__title">Anker 737</h3>
+              <p class="product-card__tagline">外出先でも安心</p>
+            </article>
+
+            <article class="product-card" data-product="anker">
+              <div class="product-card__image">
+                <img src="assets/images/anker.png" alt="Anker 737">
+              </div>
+              <h3 class="product-card__title">Anker 737</h3>
+              <p class="product-card__tagline">外出先でも安心</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category: Furniture -->
+      <section class="section">
+        <div class="container">
+          <h2>家具</h2>
+          <div class="product-showcase">
+            <article class="product-card" data-product="furniture-placeholder">
+              <div class="product-card__image">
+                <img src="assets/images/ergodox.png" alt="おすすめ家具">
+              </div>
+              <h3 class="product-card__title">準備中</h3>
+              <p class="product-card__tagline">おすすめの家具を追加予定</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category: Apps / Games -->
+      <section class="section section--accent">
+        <div class="container">
+          <h2>アプリ / ゲーム</h2>
+          <div class="product-showcase">
             <article class="product-card" data-product="switchbot">
               <div class="product-card__image">
                 <img src="assets/images/switchbot.png" alt="SwitchBot">
@@ -108,12 +171,12 @@
               <p class="product-card__tagline">生活の質が上がった</p>
             </article>
             
-            <article class="product-card" data-product="anker">
+            <article class="product-card" data-product="app-placeholder">
               <div class="product-card__image">
-                <img src="assets/images/anker.png" alt="Anker 737">
+                <img src="assets/images/anker.png" alt="おすすめアプリ">
               </div>
-              <h3 class="product-card__title">Anker 737</h3>
-              <p class="product-card__tagline">外出先でも安心</p>
+              <h3 class="product-card__title">準備中</h3>
+              <p class="product-card__tagline">おすすめのアプリを追加予定</p>
             </article>
           </div>
         </div>
@@ -135,35 +198,6 @@
           </div>
         </div>
       </div>
-
-      <section id="places" class="section section--accent">
-        <div class="container">
-          <h2>行ってよかった場所</h2>
-          <div class="cards-grid">
-             <article class="card">
-              <h3>箱根彫刻の森美術館</h3>
-              <p>
-                自然の中でアートを楽しめる美術館。広大な敷地を散歩しながら、様々な彫刻作品に触れられます。
-                ステンドグラスの塔は圧巻でした。
-              </p>
-            </article>
-             <article class="card">
-              <h3>上高地</h3>
-              <p>
-                長野県にある山岳景勝地。透き通るような川の水と、雄大な山々の景色に心が洗われました。
-                ハイキングコースも整備されており、歩きやすいです。
-              </p>
-            </article>
-             <article class="card">
-              <h3>金沢21世紀美術館</h3>
-              <p>
-                「レアンドロのプール」で有名な現代美術館。体験型のアートが多く、普段美術館に行かない人でも楽しめます。
-                街全体の雰囲気も素敵でした。
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
 
     </main>
 
