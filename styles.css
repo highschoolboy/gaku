@@ -839,23 +839,78 @@ a:hover {
 
 /* Mobile modal */
 @media (max-width: 767px) {
+  .modal {
+    padding: 0; /* Remove padding to maximize space */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal__content {
+    width: calc(100vw - 20px); /* Full width minus small margin */
+    max-width: calc(100vw - 20px);
+    max-height: 85vh;
+    margin: 10px;
+    border-radius: 12px;
+  }
+  
+  .modal__close {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+  }
+  
   .modal__body {
     grid-template-columns: 1fr;
-    gap: 24px;
-    padding: 24px;
-    padding-top: 60px;
+    gap: 16px;
+    padding: 16px;
+    padding-top: 48px;
+    overflow-y: auto;
+    max-height: calc(85vh - 32px);
   }
   
   .modal__image {
-    padding: 20px;
+    width: 100%;
+    padding: 16px;
+    max-height: 200px;
+    min-height: unset;
+    aspect-ratio: unset;
+  }
+  
+  .modal__image img {
+    width: 100%;
+    height: auto;
+    max-height: 170px;
+    object-fit: contain;
+  }
+  
+  .modal__info {
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
   
   .modal__info h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    margin: 0 0 12px;
+    line-height: 1.3;
   }
   
   .modal__info p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .modal__buttons {
+    margin-top: 16px;
+    width: 100%;
+  }
+  
+  .modal__buttons .button {
+    width: 100%;
+    text-align: center;
   }
 }
 

@@ -47,6 +47,9 @@ const modalButtons = document.getElementById('modal-buttons');
 const modalClose = document.querySelector('.modal__close');
 const modalOverlay = document.querySelector('.modal__overlay');
 
+// Store scroll position
+let scrollPosition = 0;
+
 // Open modal when product card is clicked
 document.querySelectorAll('.product-card').forEach(card => {
   card.addEventListener('click', () => {
@@ -73,8 +76,13 @@ document.querySelectorAll('.product-card').forEach(card => {
         modalButtons.appendChild(websiteBtn);
       }
       
+      // Prevent background scrolling without layout shift
+      scrollPosition = window.pageYOffset;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollPosition}px`;
+      document.body.style.width = '100%';
+      
       modal.classList.add('modal--active');
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }
   });
 });
@@ -82,7 +90,12 @@ document.querySelectorAll('.product-card').forEach(card => {
 // Close modal functions
 function closeModal() {
   modal.classList.remove('modal--active');
-  document.body.style.overflow = ''; // Restore scrolling
+  
+  // Restore scrolling and position
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollPosition);
 }
 
 modalClose.addEventListener('click', closeModal);
