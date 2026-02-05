@@ -5,7 +5,7 @@
   --accent: #0ea5e9;
   --accent-light: rgba(14, 165, 233, 0.1);
   --text: #e2e8f0;
-  --muted: #94a3b8;
+  --muted: #cbd5e1; /* Increased from #94a3b8 for better readability */
   --border: rgba(226, 232, 240, 0.08);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   --radius: 16px;
@@ -88,6 +88,8 @@ a:hover {
   margin: 0 0 24px;
   max-width: 780px;
   color: var(--muted);
+  font-weight: 400;
+  line-height: 1.7;
 }
 
 .hero__cta {
@@ -331,6 +333,8 @@ a:hover {
 .footer__text {
   margin: 0;
   color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .footer__links {
@@ -342,6 +346,18 @@ a:hover {
 .footer__links a {
   color: var(--muted);
   font-weight: 600;
+}
+
+.footer__links a.button {
+  color: #0b1221;
+}
+
+.footer__links a.button--ghost {
+  color: var(--text);
+}
+
+.footer__links a.button--ghost:hover {
+  color: #ffffff;
 }
 
 .footer__links a:hover {
