@@ -449,6 +449,17 @@ a:hover {
   font-size: 1.1rem;
   color: var(--text);
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-header__logo-icon {
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
 }
 
 .global-nav__list {
