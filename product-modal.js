@@ -2,7 +2,7 @@
 const productData = {
   sengaku: {
     title: '美空食場 鮮岳',
-    image: 'assets/images/restaurant/sengaku.jpg',
+    image: 'assets/images/restaurant/mackerel.jpg',
     description: '父が経営している、地元で愛される和食居酒屋です。四季折々の新鮮な食材を使った料理と、落ち着いた空間が自慢です。美味しいお酒と共に、特別なひとときをお過ごしください。',
     website: 'https://sengaku-bikuu.com/'
   },
@@ -12,20 +12,23 @@ const productData = {
     description: '恵比寿ガーデンプレイス38階に位置する、絶景と極上のステーキを楽しめるレストラン。開放感あふれる空間で、熟成牛や希少部位のステーキを堪能できます。特別な日のディナーや、ビジネスでの会食にも最適です。',
     website: 'https://www.kintan.restaurant/shop/ebisu-steak/'
   },
-  ergodox: {
-    title: 'ErgoDox EZ',
-    image: 'assets/images/ergodox.png',
-    description: '左右分離型のメカニカルキーボード。肩の負担が減り、長時間のコーディングでも疲れにくくなりました。カスタマイズ性が高く、自分だけのキー配列を作れるのが魅力です。キーの配置を自由に変更できるため、効率的なタイピングが可能になり、作業効率が大幅に向上しました。'
+  'mistel-md770': {
+    title: 'MiSTEL Barocco MD770',
+    image: 'assets/images/products/md770_2.jpg',
+    description: '左右分離型のメカニカルキーボード。自分の肩幅に合わせて配置できるため、長時間の作業でも疲れにくいのが最大の特徴です。静音赤軸モデルは打鍵感も良く、静かなオフィスでも使いやすい一台です。',
+    website: 'https://amzn.asia/d/0iLwB3IG'
   },
-  switchbot: {
-    title: 'SwitchBot シリーズ',
-    image: 'assets/images/switchbot.png',
-    description: '家中の家電をスマート化できるデバイス。ベッドに入ったまま照明を消したり、外出先からエアコンを操作できるので、生活の質が格段に上がりました。スマホアプリから簡単に操作でき、タイマー設定やシーン設定も可能。朝起きる時間に合わせて自動でカーテンを開けたり、帰宅前にエアコンをつけたりと、快適な生活を実現しています。'
+  'rk61': {
+    title: 'RK ROYAL KLUDGE RK61',
+    image: 'assets/images/products/RK61_2.jpg',
+    description: '60%サイズの超コンパクトなワイヤレスキーボード。デスクスペースを広く使えるだけでなく、青軸の爽快な打鍵音が心地よいです。持ち運びにも便利で、iPadなどでのモバイル作業にも重宝しています。',
+    website: 'https://amzn.asia/d/064hhicB'
   },
-  anker: {
-    title: 'Anker 737 Power Bank',
-    image: 'assets/images/anker.png',
-    description: '超大容量かつ高出力のモバイルバッテリー。MacBook Proも急速充電できるので、カフェでの作業時に重宝しています。残量表示ディスプレイも便利で、あとどれくらい使えるかが一目でわかります。24000mAhの大容量で、スマホなら約5回、ノートPCなら1回以上のフル充電が可能。USB-CとUSB-Aポートを搭載しており、複数デバイスの同時充電にも対応しています。'
+  'g502x': {
+    title: 'Logitech G502 X LIGHTSPEED',
+    image: 'assets/images/products/g502x_2.jpg',
+    description: '伝説的なゲーミングマウスG502の進化版。非常に軽量で、13個のカスタマイズ可能なボタンが生産性を爆上げしてくれます。ワイヤレスの遅延も一切なく、FPSからビジネス作業までこれ一つで完璧にこなせます。',
+    website: 'https://amzn.asia/d/0b1PuFaM'
   },
   'hotel-urayasu': {
     title: '浦安ブライトンホテル東京ベイ',
@@ -45,14 +48,15 @@ const productData = {
     description: '熱海のオーシャンビューを楽しめるリゾートホテル。全室露天風呂付きの客室もあり、ゆったりとした時間を過ごせます。相模湾の景色を眺めながら入る温泉は格別で、地元の食材を活かした料理も楽しむことができます。',
     website: 'https://www.livemax-resort.com/shizuoka/atami-ocean/'
   },
-  'furniture-placeholder': {
-    title: '準備中',
-    image: 'assets/images/ergodox.png',
-    description: 'おすすめの家具情報を追加予定です。お楽しみに！'
+  'switchbot': {
+    title: 'SwitchBot シリーズ',
+    image: 'assets/images/products/switchbot.png',
+    description: '家中の家電をスマート化できるデバイス。ベッドに入ったまま照明を消したり、外出先からエアコンを操作できるので、生活の質が格段に上がりました。',
+    website: 'https://amzn.asia/d/064hhicB' /* Placeholder amazon link */
   },
   'app-placeholder': {
     title: '準備中',
-    image: 'assets/images/anker.png',
+    image: 'assets/images/products/md770_1.jpg',
     description: 'おすすめのアプリ・ゲーム情報を追加予定です。お楽しみに！'
   }
 };
@@ -91,7 +95,10 @@ document.querySelectorAll('.product-card').forEach(card => {
         websiteBtn.target = '_blank';
         websiteBtn.rel = 'noopener noreferrer';
         websiteBtn.className = 'button';
-        websiteBtn.textContent = '公式サイトに行く';
+        // Use "Amazonで見る" if it's an amazon link, otherwise keep "公式サイトに行く"
+        websiteBtn.textContent = product.website.includes('amazon') || product.website.includes('amzn.asia') 
+          ? 'Amazonで見る' 
+          : '公式サイトに行く';
         modalButtons.appendChild(websiteBtn);
       }
       
