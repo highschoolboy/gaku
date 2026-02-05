@@ -3,7 +3,8 @@ const productData = {
   sengaku: {
     title: '美空食場 鮮岳',
     image: 'assets/images/sengaku.png',
-    description: '父が経営している、地元で愛される和食居酒屋です。四季折々の新鮮な食材を使った料理と、落ち着いた空間が自慢です。美味しいお酒と共に、特別なひとときをお過ごしください。公式サイト: https://sengaku-bikuu.com/ | 食べログ: https://tabelog.com/tokyo/A1329/A132902/13262999/'
+    description: '父が経営している、地元で愛される和食居酒屋です。四季折々の新鮮な食材を使った料理と、落ち着いた空間が自慢です。美味しいお酒と共に、特別なひとときをお過ごしください。',
+    website: 'https://sengaku-bikuu.com/'
   },
   ergodox: {
     title: 'ErgoDox EZ',
@@ -42,6 +43,7 @@ const modal = document.getElementById('product-modal');
 const modalImage = document.getElementById('modal-image');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
+const modalButtons = document.getElementById('modal-buttons');
 const modalClose = document.querySelector('.modal__close');
 const modalOverlay = document.querySelector('.modal__overlay');
 
@@ -56,6 +58,21 @@ document.querySelectorAll('.product-card').forEach(card => {
       modalImage.alt = product.title;
       modalTitle.textContent = product.title;
       modalDescription.textContent = product.description;
+      
+      // Clear previous buttons
+      modalButtons.innerHTML = '';
+      
+      // Add website button if URL exists
+      if (product.website) {
+        const websiteBtn = document.createElement('a');
+        websiteBtn.href = product.website;
+        websiteBtn.target = '_blank';
+        websiteBtn.rel = 'noopener noreferrer';
+        websiteBtn.className = 'button';
+        websiteBtn.textContent = '公式サイトに行く';
+        modalButtons.appendChild(websiteBtn);
+      }
+      
       modal.classList.add('modal--active');
       document.body.style.overflow = 'hidden'; // Prevent background scrolling
     }

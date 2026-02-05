@@ -830,6 +830,13 @@ a:hover {
   margin: 0;
 }
 
+.modal__buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 /* Mobile modal */
 @media (max-width: 767px) {
   .modal__body {
