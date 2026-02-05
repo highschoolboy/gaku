@@ -1,3 +1,1 @@
-# 2025Myhomepage
-
-Vscode と連携済みのブランチ
+一部AIによる修正あり
