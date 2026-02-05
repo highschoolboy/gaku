@@ -6,6 +6,12 @@ const productData = {
     description: '父が経営している、地元で愛される和食居酒屋です。四季折々の新鮮な食材を使った料理と、落ち着いた空間が自慢です。美味しいお酒と共に、特別なひとときをお過ごしください。',
     website: 'https://sengaku-bikuu.com/'
   },
+  'kintan-steak': {
+    title: 'THE KINTAN STEAK',
+    image: 'assets/images/restaurant/kintan_2.jpg',
+    description: '恵比寿ガーデンプレイス38階に位置する、絶景と極上のステーキを楽しめるレストラン。開放感あふれる空間で、熟成牛や希少部位のステーキを堪能できます。特別な日のディナーや、ビジネスでの会食にも最適です。',
+    website: 'https://www.kintan.restaurant/shop/ebisu-steak/'
+  },
   ergodox: {
     title: 'ErgoDox EZ',
     image: 'assets/images/ergodox.png',
