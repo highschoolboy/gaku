@@ -611,6 +611,4 @@ a:hover {
   transition: transform 0.3s ease;
 }
 
-.sushida-card:hover .media-card__media img {
-  transform: scale(1.2); /* Zoom more on hover */
-}
+
