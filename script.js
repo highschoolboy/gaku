@@ -77,20 +77,18 @@ function initNavigation() {
 
 /* ===== Gallery Logic ===== */
 async function loadGallery() {
-  const mediaSection = document.getElementById("media");
-  if (!mediaSection) return;
+  const galleryContainer = document.getElementById("sushida-gallery-container");
+  if (!galleryContainer) return;
 
-  const container = mediaSection.querySelector(".container");
-  
   // Clear existing static content if we want to replace it entirely
   // Keeping the heading
-  const heading = container.querySelector("h2");
-  container.innerHTML = "";
-  if (heading) container.appendChild(heading);
+  const heading = galleryContainer.querySelector("h2");
+  galleryContainer.innerHTML = "";
+  if (heading) galleryContainer.appendChild(heading);
 
   const grid = document.createElement("div");
   grid.classList.add("cards-grid", "cards-grid--media");
-  container.appendChild(grid);
+  galleryContainer.appendChild(grid);
 
   try {
     const response = await fetch("gallery.json");
@@ -139,6 +137,6 @@ async function loadGallery() {
     console.error("Gallery loading error:", error);
     const errorMsg = document.createElement("p");
     errorMsg.textContent = "ギャラリーの読み込みに失敗しました。";
-    container.appendChild(errorMsg);
+    galleryContainer.appendChild(errorMsg);
   }
 }
