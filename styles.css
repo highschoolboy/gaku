@@ -715,7 +715,9 @@ a:hover {
 /* ===== Product Showcase (Apple-style) ===== */
 .product-showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Limit to max 3 columns on PC, sized between 280px and 350px */
+  grid-template-columns: repeat(3, minmax(0, 350px));
+  justify-content: start; /* Left-align when items are fewer than columns */
   gap: 32px;
   margin-top: 40px;
 }
