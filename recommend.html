@@ -87,11 +87,12 @@
       </section>
 
 
+
       <section id="items" class="section">
         <div class="container">
           <h2>買ってよかったもの</h2>
           <div class="product-showcase">
-            <article class="product-card">
+            <article class="product-card" data-product="ergodox">
               <div class="product-card__image">
                 <img src="assets/images/ergodox.png" alt="ErgoDox EZ">
               </div>
@@ -99,7 +100,7 @@
               <p class="product-card__tagline">肩の負担が激減した</p>
             </article>
             
-            <article class="product-card">
+            <article class="product-card" data-product="switchbot">
               <div class="product-card__image">
                 <img src="assets/images/switchbot.png" alt="SwitchBot">
               </div>
@@ -107,7 +108,7 @@
               <p class="product-card__tagline">生活の質が上がった</p>
             </article>
             
-            <article class="product-card">
+            <article class="product-card" data-product="anker">
               <div class="product-card__image">
                 <img src="assets/images/anker.png" alt="Anker 737">
               </div>
@@ -117,6 +118,23 @@
           </div>
         </div>
       </section>
+
+      <!-- Product Detail Modal -->
+      <div id="product-modal" class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__content">
+          <button class="modal__close" aria-label="閉じる">&times;</button>
+          <div class="modal__body">
+            <div class="modal__image">
+              <img id="modal-image" src="" alt="">
+            </div>
+            <div class="modal__info">
+              <h2 id="modal-title"></h2>
+              <p id="modal-description"></p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section id="places" class="section section--accent">
         <div class="container">
@@ -150,6 +168,7 @@
     </main>
 
     <script src="script.js"></script>
+    <script src="product-modal.js"></script>
 
     <footer class="footer">
       <div class="container footer__content">
