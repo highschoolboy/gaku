@@ -108,12 +108,18 @@ a:hover {
 .button:hover {
   transform: translateY(-1px);
   box-shadow: 0 14px 30px rgba(14, 165, 233, 0.35);
+  color: #0b1221; /* Ensure text remains visible */
 }
 
 .button--ghost {
   background: transparent;
   color: var(--text);
   box-shadow: none;
+}
+
+.button--ghost:hover {
+  color: #ffffff; /* Keep text white for ghost button on hover */
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .section {
