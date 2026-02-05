@@ -100,6 +100,9 @@ async function loadGallery() {
     items.forEach((item) => {
       const article = document.createElement("article");
       article.classList.add("media-card");
+      if (item.className) {
+        article.classList.add(item.className);
+      }
 
       let mediaContent = "";
       if (item.type === "image") {

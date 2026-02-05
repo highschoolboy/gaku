@@ -4,7 +4,8 @@
     "title": "寿司打 スコア画像",
     "caption": "一番調子が良かった日の画像",
     "thumbUrl": "assets/images/sushida.jpg",
-    "fullUrl": "assets/images/sushida.jpg"
+    "fullUrl": "assets/images/sushida.jpg",
+    "className": "sushida-card"
   },
   {
     "type": "youtube",
