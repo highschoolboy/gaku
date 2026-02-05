@@ -49,6 +49,8 @@ a {
   text-decoration: none;
 }
 
+
+
 a:hover {
   color: var(--accent);
 }
@@ -60,7 +62,7 @@ a:hover {
 }
 
 .hero {
-  padding: 80px 0 70px;
+  padding: 140px 0 70px; /* Increased top padding to account for fixed header (80px -> 140px) */
   background: linear-gradient(
       135deg,
       rgba(15, 23, 42, 0.8),
@@ -463,7 +465,7 @@ a:hover {
   }
 
   .hero {
-    padding-top: 60px;
+    padding-top: 120px; /* Adjusted for fixed header on mobile */
   }
 
   .hero__cta {
@@ -474,8 +476,10 @@ a:hover {
 
 /* ===== Navigation ===== */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
   background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(10px);
@@ -566,10 +570,6 @@ a:hover {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
-
   .global-nav {
     position: fixed;
     top: 0;
@@ -580,10 +580,15 @@ a:hover {
     padding: 80px 24px;
     transition: right 0.3s ease;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
   }
 
   .global-nav[aria-hidden="false"] {
     right: 0;
+  }
+
+  .nav-toggle {
+    display: block;
   }
 
   .global-nav__list {
@@ -597,6 +602,12 @@ a:hover {
   }
 }
 
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
 /* Overlay for mobile menu */
 .nav-overlay {
   position: fixed;
@@ -605,10 +616,11 @@ a:hover {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s;
+  transition: all 0.3s ease;
 }
 
 .nav-overlay.is-visible {
