@@ -21,10 +21,23 @@ const productData = {
     image: 'assets/images/anker.png',
     description: '超大容量かつ高出力のモバイルバッテリー。MacBook Proも急速充電できるので、カフェでの作業時に重宝しています。残量表示ディスプレイも便利で、あとどれくらい使えるかが一目でわかります。24000mAhの大容量で、スマホなら約5回、ノートPCなら1回以上のフル充電が可能。USB-CとUSB-Aポートを搭載しており、複数デバイスの同時充電にも対応しています。'
   },
-  'hotel-placeholder': {
-    title: '準備中',
-    image: 'assets/images/switchbot.png',
-    description: 'おすすめのホテル情報を追加予定です。お楽しみに！'
+  'hotel-urayasu': {
+    title: '浦安ブライトンホテル東京ベイ',
+    image: 'assets/images/hotel/hotel_urayasu_2.jpg',
+    description: '新浦安駅直結の便利なロケーションにあるホテル。開放感のある客室と充実した設備が魅力です。ディズニーリゾートへのアクセスも良く、観光やビジネスに最適です。充実したレストランや、最上階のラウンジからの景色も楽しめます。',
+    website: 'https://urayasu.brightonhotels.co.jp/'
+  },
+  'hotel-ginza': {
+    title: 'アゴーラ東京銀座',
+    image: 'assets/images/hotel/hotel_ginza_2.jpg',
+    description: '銀座の中心にありながら、日本の伝統的な美しさを感じられる「粋」なホテル。洗練された客室と細やかなおもてなしが特徴です。観光やショッピングに非常に便利な立地で、都会の喧騒を忘れさせる落ち着いた時間を過ごせます。',
+    website: 'https://www.agora-ginza.com/'
+  },
+  'hotel-atami': {
+    title: 'LIVEMAX熱海',
+    image: 'assets/images/hotel/hotel_atami_2.jpg',
+    description: '熱海のオーシャンビューを楽しめるリゾートホテル。全室露天風呂付きの客室もあり、ゆったりとした時間を過ごせます。相模湾の景色を眺めながら入る温泉は格別で、地元の食材を活かした料理も楽しむことができます。',
+    website: 'https://www.livemax-resort.com/shizuoka/atami-ocean/'
   },
   'furniture-placeholder': {
     title: '準備中',
