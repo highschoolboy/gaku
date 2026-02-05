@@ -55,9 +55,6 @@ a:hover {
     ),
     url("assets/images/error.png");
   background-size: cover;
-  /* 画像内の被写体（頭とモニター）の位置に合わせて調整。
-     center 35% は、画像の横中央・上から35%の位置を基準に表示します。 
-     被写体が画像のもっと上にある場合は 20% などに小さく、下にある場合は 50% や 60% に調整してください。 */
   background-position: center 15%;
   border-bottom: 1px solid var(--border);
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.02);
