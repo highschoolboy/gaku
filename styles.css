@@ -62,7 +62,7 @@ a:hover {
 }
 
 .hero {
-  padding: 140px 0 70px; /* Increased top padding to account for fixed header (80px -> 140px) */
+  padding: 140px 0 100px; /* Increased top padding to account for fixed header (80px -> 140px) */
   background: linear-gradient(
       135deg,
       rgba(15, 23, 42, 0.8),
@@ -80,12 +80,18 @@ a:hover {
     background-position: 20% 15%; /* Shift text/focus to the left on mobile to show the person */
   }
   .hero.hero--home {
+    padding-top: 200px; /* 文字のスタートを今まで(120px)より「少しだけ」下げるかたちで調整 */
+    border-bottom: none; /* 下の境界線を消す */
+    box-shadow: none; /* シャドウも消去 */
     background-image: linear-gradient(
-        135deg,
-        rgba(15, 23, 42, 0.8),
-        rgba(15, 23, 42, 0.7)
+        to bottom,
+        rgba(15, 23, 42, 0.3) 20%,
+        rgba(15, 23, 42, 0.5) 40%,
+        rgba(15, 23, 42, 1) 100% /* 背景色と完全に同化させる */
       ),
       url("assets/images/profile_suit.JPG");
+    background-size: auto 125%; /* 画像を拡大して上の空間を詰める */
+    background-position: 30% 100%; /* 下を基準に配置し、顔を一番上まで押し上げる */
   }
 }
 
@@ -94,7 +100,7 @@ a:hover {
   padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(9, 152, 255, 0.341);
   color: var(--muted);
   letter-spacing: 0.08em;
   font-size: 0.85rem;
